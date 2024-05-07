@@ -4,24 +4,19 @@ def hitung_bmi(berat_badan, tinggi_badan):
 
 def rekomendasi_bmi(bmi):
     if bmi < 18.5:
-        return "Berat badan kurang"
+        return "berat badan kurang"
     elif 18.5 <= bmi < 24.9:
-        return "Berat badan normal"
+        return "berat badan normal"
     elif 25 <= bmi < 29.9:
-        return "Kelebihan berat badan"
+        return "kelebihan berat badan"
     else:
-        return "Obesitas"
+        return "obesitas"
 
-def main():
-    print("Kalkulator BMI")
-    berat_badan = float(input("Masukkan berat badan (kg): "))
-    tinggi_badan = float(input("Masukkan tinggi badan (m): "))
-
-    bmi = hitung_bmi(berat_badan, tinggi_badan)
-    kategori_bmi = rekomendasi_bmi(bmi)
-
-    print(f"BMI Anda: {bmi:.2f}")
-    print(f"Rekomendasi: {kategori_bmi}")
-
-if __name__ == "__main__":
-    main()
+berat_badan = float(input("Masukkan berat badan (kg): ").replace(',', '.'))
+tinggi_badan = float(input("Masukkan tinggi badan (m): "))
+bmi_hasil = hitung_bmi(berat_badan, tinggi_badan)
+kategori_bmi = rekomendasi_bmi(bmi_hasil)
+print("Berat badan   : {} kg".format(berat_badan))
+print("Tinggi badan  : {} m".format(tinggi_badan))
+print("Nilai BMI Anda: {:.2f}".format(bmi_hasil))
+print("Kategori BMI  :", kategori_bmi)
