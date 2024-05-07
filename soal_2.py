@@ -7,6 +7,6 @@ def is_leap_year(year):
 year = int(input("Masukkan tahun: "))
 
 if is_leap_year(year):
-    print("tahun"(year, "merupakan TAHUN KABISAT"))
+    print(year, "merupakan TAHUN KABISAT")
 else:
-    print("tahun"(year, "bukan TAHUN KABISAT"))
+    print(year, "bukan TAHUN KABISAT")
